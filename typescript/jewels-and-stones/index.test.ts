@@ -1,4 +1,4 @@
-import { numJewelsInStones } from './jewels-and-stones'
+import { numJewelsInStones } from './index'
 
 it('Checks that the function states how many jewels are in the stones string', () => {
   const testCases = {
