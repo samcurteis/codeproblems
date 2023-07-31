@@ -20,8 +20,5 @@ export default function decodeMessage(key: string, message: string): string {
     }
   }
 
-
-
-
   return res
 }
