@@ -1,0 +1,14 @@
+export default function checkIfPangram(sentence: string): boolean {
+  const set = new Set()
+
+  for (let i = 0; i < sentence.length; i++) {
+    set.add(sentence[i])
+  }
+
+  const sizeOfAlphabet = 26
+
+  if (set.size === sizeOfAlphabet) return true
+
+  return false
+
+}
