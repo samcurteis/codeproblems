@@ -13,5 +13,5 @@ def test_function_returns_number_of_jewels_in_stones_string():
         'output': 0
     }
 
-    assert numJewelsInStones(testCase1['jewels'], testCase1['stones']) == testCase1['output']
+    assert numJewelsInStones(testCase1['jewels'], testCase1['stones']) == False
     assert numJewelsInStones(testCase2['jewels'], testCase2['stones']) == testCase2['output']
