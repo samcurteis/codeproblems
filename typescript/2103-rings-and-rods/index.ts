@@ -1,16 +1,16 @@
 export default function countPoints(rings: string): number {
   let res: number = 0
-  const ringArray: string[] = []
+  const rodArray: string[] = []
   for (let i = 0; i < rings.length; i += 2) {
-    const ringIndex: string = rings[i + 1]
-    if (ringArray[ringIndex] === undefined) {
-      ringArray[ringIndex] = []
+    const rodIndex: string = rings[i + 1]
+    if (rodArray[rodIndex] === undefined) {
+      rodArray[rodIndex] = []
     }
-    if (ringArray[ringIndex] !== 'end') {
-      ringArray[ringIndex] = ringArray[ringIndex] + rings[i]
-      if (ringArray[ringIndex].includes('R') && ringArray[ringIndex].includes('G') && ringArray[ringIndex].includes('B')) {
+    if (rodArray[rodIndex] !== 'end') {
+      rodArray[rodIndex] = rodArray[rodIndex] + rings[i]
+      if (rodArray[rodIndex].includes('R') && rodArray[rodIndex].includes('G') && rodArray[rodIndex].includes('B')) {
         res += 1
-        ringArray[ringIndex] = 'end'
+        rodArray[rodIndex] = 'end'
       }
     }
   }
