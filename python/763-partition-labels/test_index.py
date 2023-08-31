@@ -12,4 +12,5 @@ def test_function_returns_most_partitions_possible():
         'output': [10]
     }
 
+    assert partitionLabels(testCase1['s']) == testCase1['output']
     assert partitionLabels(testCase2['s']) == testCase2['output']
