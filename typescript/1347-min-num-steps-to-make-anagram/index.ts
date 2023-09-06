@@ -1,12 +1,6 @@
 export default function minSteps(s: string, t: string): number {
-  // create a map of ach letter in t, set value to false
-  // iterate over s, if letter is a key in map,
-  //      if key is falsese
-  //          set key to true
-  //      if key is true,
-  //          push letter to array
-  // if letter is not in map, push to array
-
+  // Create a map for both s and t arrays that keeps the letter as its key and the frequency of that letter's occurrence as its value
+  // Create a counter to represent how many letters in t need to be changed to make it an anagram of s
   const tMap = new Map<string, number>();
   const sMap = new Map<string, number>();
   let counter: number = 0;
@@ -25,7 +19,9 @@ export default function minSteps(s: string, t: string): number {
       sMap.set(s[i], 1);
     }
   }
-
+  // Iterate through the map for s, check if t has that letter
+  // If it doesn't have the letter, the counter is incremented by how many times that letter is present in s
+  // If it does have the letter, the counter is incremented by how many more times it is present in s compared to t
   for (let [letter, sCount] of sMap) {
     const tLetter = tMap.get(letter);
     if (tLetter) {
